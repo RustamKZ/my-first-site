@@ -7,6 +7,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Empty step
-        run: echo "Workflow created"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run echo command
+        run: echo "CI is working!"
